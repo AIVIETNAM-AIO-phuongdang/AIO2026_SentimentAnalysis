@@ -577,7 +577,7 @@ def generate_test_report(results):
     )
 
     ax1.set_title("Test Result Distribution")
-
+     
     # Chart 2
     ax2 = plt.subplot2grid((3, 3), (0, 1))
 
