@@ -36,7 +36,7 @@ services:
       MODEL_PATH: /app/models/sentiment_model.joblib
       PYTHONUNBUFFERED: 1
     depends_on:
-      - model
+      - train-model
     restart: unless-stopped
     command: >
       uvicorn api.main:app
@@ -83,7 +83,7 @@ services:
       - ./reports:/app/reports
     user: "${UID:-1000}:${GID-1000}"
     depends_on:
-      - model
+      - train-model
     command: >
       python tests/test_model.py
   # =========================
