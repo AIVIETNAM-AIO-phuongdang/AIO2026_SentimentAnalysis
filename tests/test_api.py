@@ -24,7 +24,8 @@ from datetime import datetime
 
 
 import os
-
+import matplotlib
+matplotlib.use("Agg") 
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
 
 BASE = os.path.dirname(
